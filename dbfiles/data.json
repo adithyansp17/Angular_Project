@@ -1,0 +1,465 @@
+{
+  "restaurants": [
+    {
+      "user_id": "1",
+      "id": "1",
+      "rName": "Truffles",
+      "ROpen": true,
+      "arrAddress": [
+        {
+          "houseno": "4046",
+          "street": "akd",
+          "area": "ads1",
+          "city": "Anirudh",
+          "country": "India",
+          "pincode": "123456",
+          "id": "1"
+        },
+        {
+          "houseno": "324",
+          "street": "akd",
+          "area": "waegfra",
+          "city": "Anirudh",
+          "country": "India",
+          "pincode": "123455",
+          "id": "2"
+        }
+      ],
+      "dishlist": [
+        {
+          "dName": "Biriyani",
+          "price": 170,
+          "img_path": "https://images.pexels.com/photos/2297961/pexels-photo-2297961.jpeg?cs=srgb&dl=pexels-brett-jordan-2297961.jpg&fm=jpg",
+          "isAvailable": true,
+          "id": "1",
+          "r_id": "1"
+        },
+        {
+          "dName": "Pastry",
+          "price": 120,
+          "img_path": "https://images.pexels.com/photos/2297961/pexels-photo-2297961.jpeg?cs=srgb&dl=pexels-brett-jordan-2297961.jpg&fm=jpg",
+          "isAvailable": true,
+          "id": "2",
+          "r_id": "1"
+        },
+        {
+          "dName": "Burger",
+          "price": 250,
+          "img_path": "https://images.pexels.com/photos/2297961/pexels-photo-2297961.jpeg?cs=srgb&dl=pexels-brett-jordan-2297961.jpg&fm=jpg",
+          "isAvailable": true,
+          "id": "3",
+          "r_id": "1"
+        },
+        {
+          "dName": "Steak",
+          "price": 7000,
+          "img_path": "https://images.pexels.com/photos/2297961/pexels-photo-2297961.jpeg?cs=srgb&dl=pexels-brett-jordan-2297961.jpg&fm=jpg",
+          "isAvailable": true,
+          "id": "4",
+          "r_id": "1"
+        },
+        {
+          "dName": "Soup",
+          "price": 123,
+          "img_path": "https://www.seriouseats.com/thmb/2nouHHsjM0bN1vwXMOZGUkLFsJ8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2017__12__20171115-chicken-soup-vicky-wasik-11-80db1a04d84a43a089e0559efdddd517.jpg",
+          "isAvailable": false,
+          "id": "5",
+          "r_id": "1"
+        }
+      ]
+    },
+    {
+      "user_id": "2",
+      "id": "2",
+      "rName": "Tonique",
+      "ROpen": true,
+      "arrAddress": [
+        {
+          "id": "1",
+          "houseno": "26",
+          "street": "ABC rd",
+          "area": "Domlur",
+          "city": "Bangalore",
+          "pincode": "560012",
+          "country": "India"
+        },
+        {
+          "id": "2",
+          "houseno": "27",
+          "street": "Palmgrove rd",
+          "area": "Victoria Layout",
+          "city": "Bangalore",
+          "pincode": "560013",
+          "country": "India"
+        }
+      ],
+      "dishlist": [
+        {
+          "id": "1",
+          "dName": "Biriyani",
+          "price": 170,
+          "img_path": "https://healux.in/wp-content/uploads/2020/11/ChickenBiryani.jpg",
+          "r_id": "2",
+          "isAvailable": true
+        },
+        {
+          "id": "2",
+          "dName": "Pastry",
+          "price": 120,
+          "img_path": "https://theobroma.in/cdn/shop/products/RedVelvetPastry1.jpg?v=1632143810",
+          "r_id": "2",
+          "isAvailable": true
+        },
+        {
+          "id": "3",
+          "dName": "Burger",
+          "price": 250,
+          "img_path": "https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg",
+          "r_id": "2",
+          "isAvailable": true
+        },
+        {
+          "id": "4",
+          "dName": "Steak",
+          "price": 300,
+          "img_path": "https://food-images.files.bbci.co.uk/food/recipes/rib-eye_steak_with_61963_16x9.jpg",
+          "r_id": "2",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "user_id": "3",
+      "id": "3",
+      "rName": "Cafe Jade",
+      "ROpen": true,
+      "arrAddress": [
+        {
+          "id": 1,
+          "houseno": "1",
+          "street": "akd",
+          "area": "area23",
+          "city": "Anirudh",
+          "pincode": "123456",
+          "country": "India"
+        }
+      ],
+      "dishlist": [
+        {
+          "id": "1",
+          "dName": "Noodles",
+          "price": 456,
+          "img_path": "https://www.recipetineats.com/wp-content/uploads/2023/09/Garlic-noodles-with-egg-close-up.jpg",
+          "r_id": "3",
+          "isAvailable": true
+        },
+        {
+          "id": "2",
+          "dName": "Biriyani",
+          "price": "150",
+          "img_path": "https://im.whatshot.in/img/2018/Nov/is-image-1-pre-cropped-1542960293.jpg?w=1336&h=890&cc=1",
+          "r_id": "3",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "user_id": "2",
+      "id": "4",
+      "rName": "Paradise",
+      "ROpen": true,
+      "arrAddress": [
+        {
+          "id": "1",
+          "houseno": "1",
+          "street": "akd",
+          "area": "23",
+          "city": "Anirudh",
+          "pincode": "123456",
+          "country": "India"
+        },
+        {
+          "id": "2",
+          "houseno": "26",
+          "street": "ABC rd",
+          "area": "adf",
+          "city": "Bangalore",
+          "pincode": "561123",
+          "country": "India"
+        },
+        {
+          "id": "3",
+          "houseno": "23",
+          "street": "vijay road",
+          "area": "victoria",
+          "city": "bangalore",
+          "pincode": "344533",
+          "country": "India"
+        }
+      ],
+      "dishlist": [
+        {
+          "id": "1",
+          "dName": "Biriyani",
+          "price": 330,
+          "img_path": "https://bonmasala.com/wp-content/uploads/2022/10/mutton-biriyani-recipe.jpeg",
+          "r_id": "4",
+          "isAvailable": true
+        },
+        {
+          "id": "2",
+          "dName": "dosa",
+          "price": "150",
+          "img_path": "dfsdfsd",
+          "r_id": "2",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Hopkins",
+      "role": "restaurantOwner",
+      "DOB": "2000-04-10",
+      "email": "abc@xyz.com",
+      "password": "00asp00",
+      "address": {
+        "id": "1",
+        "houseno": 23,
+        "street": "Palmgrove rd",
+        "area": "Victoria Layout",
+        "city": "Bangalore",
+        "country": "India",
+        "pincode": 560010
+      },
+      "mobile": 9447416588
+    },
+    {
+      "id": "2",
+      "firstName": "Jim",
+      "lastName": "Parson",
+      "role": "admin",
+      "DOB": "2000-04-10",
+      "email": "lmn@xyz.com",
+      "mobile": "9007416578",
+      "password": "02asp02",
+      "address": {
+        "id": "3",
+        "houseno": 26,
+        "street": "ABC rd",
+        "area": "Domlur",
+        "city": "Bangalore",
+        "country": "India",
+        "pincode": 560012
+      }
+    },
+    {
+      "id": "3",
+      "firstName": "Tom",
+      "lastName": "Jerry1",
+      "role": "user",
+      "DOB": "2000-04-10",
+      "email": "jerry@xyz.com",
+      "password": "as",
+      "address": {
+        "id": "4",
+        "houseno": 26,
+        "street": "ABC rd",
+        "area": "assa",
+        "city": "Bangalore",
+        "country": "India",
+        "pincode": "561123"
+      },
+      "mobile": 7306076348
+    },
+    {
+      "id": "4",
+      "firstName": "Miti",
+      "lastName": "aa",
+      "role": "user",
+      "DOB": "2000-04-10",
+      "email": "miti@gmail.com",
+      "password": "miti",
+      "address": {
+        "id": "5",
+        "houseno": 45,
+        "street": "Palmgrove rd",
+        "area": "sfdz",
+        "city": "Bangalore",
+        "country": "India",
+        "pincode": "560010"
+      },
+      "mobile": 7306076345
+    },
+    {
+      "id": "5",
+      "firstName": "Anirudh",
+      "lastName": "Priyan",
+      "role": "user",
+      "DOB": "2000-04-10",
+      "email": "abc@xyz.com",
+      "password": "asp",
+      "address": {
+        "id": "6",
+        "houseno": 1,
+        "street": "akd",
+        "area": "Victoria Layout",
+        "city": "Anirudh",
+        "country": "India",
+        "pincode": "123456"
+      },
+      "mobile": 7306076345
+    },
+    {
+      "id": "6",
+      "firstName": "John",
+      "lastName": "R",
+      "role": "user",
+      "DOB": "2000-04-10",
+      "email": "johnr@gmail.com",
+      "password": "password",
+      "address": {
+        "id": "10",
+        "houseno": "1234",
+        "street": "3rd Cross St.",
+        "area": "Madiwala",
+        "city": "Bangalore",
+        "pincode": "580088",
+        "country": "India"
+      }
+    },
+    {
+      "id": "7",
+      "firstName": "John",
+      "lastName": "Honai",
+      "role": "user",
+      "email": "johnr1@gmail.com",
+      "password": "qwertyu",
+      "address": {
+        "id": "10",
+        "houseno": "23",
+        "street": "3rd",
+        "area": "Madiwala",
+        "city": "Bangalore",
+        "pincode": "580056",
+        "country": "India"
+      },
+      "DOB": "2000-04-10"
+    },
+    {
+      "id": "8",
+      "firstName": "Alvin",
+      "lastName": "Thomas",
+      "role": "user",
+      "email": "alvint@gmail.com",
+      "password": "qwertyu",
+      "address": {
+        "id": "10",
+        "houseno": "1234",
+        "street": "ABC rd",
+        "area": "Indiranagar",
+        "city": "Bangalore",
+        "pincode": "560011",
+        "country": "India"
+      },
+      "DOB": "2000-04-10"
+    },
+    {
+      "id": "9",
+      "firstName": "Prajith",
+      "lastName": "Shetty",
+      "role": "user",
+      "email": "ps@gmail.com",
+      "password": "as",
+      "address": {
+        "id": "1",
+        "houseno": "1234",
+        "street": "ABC rd",
+        "area": "Indiranagar",
+        "city": "Bangalore",
+        "pincode": "560011",
+        "country": "India"
+      },
+      "DOB": "2000-04-10"
+    },
+    {
+      "id": "10",
+      "firstName": "Maria",
+      "lastName": "VG",
+      "role": "user",
+      "email": "mvg@gmail.com",
+      "password": "as",
+      "address": {
+        "id": "1",
+        "houseno": "123",
+        "street": "2nd St",
+        "area": "BNGLR",
+        "city": "Bangalore",
+        "pincode": "34523",
+        "country": "India"
+      },
+      "DOB": "2000-04-10"
+    },
+    {
+      "id": "11",
+      "firstName": "Sam",
+      "lastName": "Thomas",
+      "role": "user",
+      "email": "as@as.as",
+      "password": "as",
+      "address": {
+        "id": "1",
+        "houseno": "1234",
+        "street": "HAL rd",
+        "area": "Indiranagar",
+        "city": "Bangalore",
+        "pincode": "560012",
+        "country": "india"
+      },
+      "DOB": "2002-06-20"
+    }
+  ],
+  "orders": [
+    {
+      "id": "0",
+      "userId": "0",
+      "orderDate": "",
+      "orderAmount": 360,
+      "arrDishes": [
+        {
+          "id": "2",
+          "dName": "Pastry",
+          "price": 120,
+          "img_path": "https://theobroma.in/cdn/shop/products/RedVelvetPastry1.jpg?v=1632143810",
+          "r_id": "2",
+          "isAvailable": true
+        }
+      ],
+      "quantity": [
+        3
+      ]
+    }
+  ],
+  "carts": [
+    {
+      "id": "9",
+      "Amount": 340,
+      "arrDishes": [
+        {
+          "dName": "Biriyani",
+          "price": 170,
+          "img_path": "https://images.pexels.com/photos/2297961/pexels-photo-2297961.jpeg?cs=srgb&dl=pexels-brett-jordan-2297961.jpg&fm=jpg",
+          "isAvailable": true,
+          "id": "1",
+          "r_id": "1"
+        }
+      ],
+      "quantity": [
+        2
+      ]
+    }
+  ]
+}

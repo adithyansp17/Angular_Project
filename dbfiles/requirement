@@ -1,0 +1,28 @@
+Home page: 3 dishes in cards with view more button -> on click -> List of Restaurants with View Details button
+Restaurant component -> List of restaurants with List of Restaurants with View Details button
+-> Individual Restaurant with Dishes -> Dish with Add To Cart option
+
+Aboutus
+
+Dishes(Not now)
+Cart(Not now)
+Admin for CRUD
+Login/Logout and Register and show profile icon
+✌️All Forms to be validated and check validity onSubmit
+An input boxwhich allows only numbers to be typed using a custom directive
+User DOB custom validation for age
+When the admin changes the dish available to false, the image of the dish should get grayed
+Orders only View,Delete in Admin,Adds an order when Cart is checked out
+
+use impure pipes to display only those restuarnt which are open
+directive - rest closed should be grey out
+pipe currency
+Image in admin view restaurant and user view restaurant
+Overall UI
+Clear cart when checkout
+
+---
+
+Note: Requirements will be updated as we proceed with the course. Please check before final submission
+
+---

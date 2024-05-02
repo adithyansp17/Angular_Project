@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="form-label" for="id">Select a user:</label>
+        <select class="form-select" id="id" formControlName="id" (change)="onUserSelected($event)">
+          <option selected>Select a user</option>
+          <option *ngFor="let u of arrUsers" [ngValue]="u">{{ u.firstName }} {{ u.lastName }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="selectedUser">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">User Details</h5>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Name:</strong> {{ selectedUser?.firstName }} {{ selectedUser?.lastName }}</li>
+            <!-- <li class="list-group-item"><strong>Role:</strong> {{ selectedUser?.role }}</li> -->
+            <li class="list-group-item"><strong>Email:</strong> {{ selectedUser?.email }}</li>
+            <li class="list-group-item"><strong>Address:</strong> {{ selectedUser?.address?.houseno }}, {{ selectedUser?.address?.street }}, {{ selectedUser?.address?.city }}, {{ selectedUser?.address?.country }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

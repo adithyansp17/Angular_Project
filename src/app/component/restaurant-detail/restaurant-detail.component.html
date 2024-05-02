@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <h2 class="mb-4"><b>{{ r.rName }}</b></h2>
+  
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div *ngFor="let d of r.dishlist" class="col">
+        <div *ngIf="d.isAvailable" class="card h-60">
+          <img [src]="d.img_path" class="card-img-top" alt="dish-image" height="250">
+          <div class="card-body">
+            <h5 class="card-title">{{ d.dName }}</h5>
+            <p class="card-text"> {{ d.price | currency : 'INR'}}</p>
+            <button class="btn btn-primary" *ngIf="buttonVisible" (click)="addToCart(d.id)">Add to Cart</button>
+          </div>
+        </div>
+        <div *ngIf="!d.isAvailable" class="card h-60 dim">
+          <img [src]="d.img_path" class="card-img-top dimimg" alt="dish-image" height="250">
+          <div class="card-body">
+            <h5 class="card-title">{{ d.dName }}</h5>
+            <p class="card-text"> {{ d.price | currency : 'INR'}}</p>
+            <p class="ntdish">Dish Unavailable right now!!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+       
+       
+
+      
+  

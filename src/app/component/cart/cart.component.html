@@ -1,0 +1,18 @@
+
+<div class="container">
+    <div *ngFor="let d of cartd.arrDishes;let i= index" class="card">
+        <div class="card-body">
+            <div class="card-content">
+              <h5 class="card-title">{{ d.dName }}</h5>
+              <p>Quantity - {{ cartd.quantity[i] }}</p>
+              <p>Price - {{ d.price }}</p>
+              <p>Total - {{ d.price * cartd.quantity[i] }}</p>
+            </div>
+            <a href="#" class="btn btn-dark" (click)="SubQty(i)">-</a>
+            <span>{{cartd.quantity[i] }}</span>
+            <a href="#" class="btn btn-dark" (click)="AddQty(i)">+</a>
+        </div>
+    </div>
+    <h5 >Total amount = {{total}}</h5>
+    <br/>
+</div>

@@ -1,0 +1,18 @@
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card-content {
+    flex: 1; /* Take up remaining space */
+  }
+  
+
+  .btn{
+    margin-right: 8px;
+  }
+  span{
+    margin-right: 5px ;
+    // background-color: dimgray;
+  }

@@ -1,0 +1,57 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-text {
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #6849f1;
+  border-color: #6849f1;
+}
+
+.btn-primary:hover {
+  background-color: #5f42dd;
+  border-color: #5f42dd;
+}
+
+.card {
+  position: relative; /* Ensure positioning context for overlay */
+  height: 180px;
+}
+
+.gradient-overlay {
+  position: absolute; /* Position the overlay absolutely */
+  top: 0; /* Place the overlay at the top of the card */
+  left: 0; /* Align the overlay to the left side of the card */
+  width: 100%; /* Make the overlay cover the entire card */
+  height: 180px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    transparent
+  ); /* Adjust the alpha value as needed */
+  color: white;
+  border-radius: 10px;
+}
+
+.card-body {
+  display: block;
+}

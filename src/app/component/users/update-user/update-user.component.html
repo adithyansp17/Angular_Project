@@ -1,0 +1,111 @@
+<form [formGroup]="updateUserForm" (ngSubmit)="OnSubmit(updateUserForm.value)" class="needs-validation" novalidate>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="id" class="form-label">Select a User for Update:</label>
+        <select class="form-select" id="id" formControlName="id" (change)="onChangeType($event)" required>
+          <option selected disabled>Select a value</option>
+          <option *ngFor="let u of arrUsers" [ngValue]="u.id">{{u.firstName}}</option>
+        </select>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('id')?.invalid && updateUserForm.get('id')?.touched">Please select a user.</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder="Enter First Name" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('firstName')?.invalid && updateUserForm.get('firstName')?.touched">First Name is required.</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="Enter Last Name" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('lastName')?.invalid && updateUserForm.get('lastName')?.touched">Last Name is required.</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="DOB" class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" id="DOB" formControlName="DOB" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('DOB')?.invalid && updateUserForm.get('DOB')?.touched">Please enter a valid Date of Birth.</div>
+      </div>
+    </div>
+    <!-- <div class="col-md-6">
+      <div class="form-group">
+        <label for="role" class="form-label">Role</label>
+        <input type="text" class="form-control" id="role" formControlName="role" placeholder="Enter Role" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('role')?.invalid && updateUserForm.get('role')?.touched">Role is required.</div>
+      </div>
+    </div> -->
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Email Address" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('email')?.invalid && updateUserForm.get('email')?.touched">Please enter a valid Email Address.</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter Password" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('password')?.invalid && updateUserForm.get('password')?.touched">Password is required.</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="houseno" class="form-label">House No.</label>
+        <input type="text" class="form-control" id="houseno" formControlName="houseno" placeholder="Enter House No." required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('houseno')?.invalid && updateUserForm.get('houseno')?.touched">House No. is required.</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="street" class="form-label">Street</label>
+        <input type="text" class="form-control" id="street" formControlName="street" placeholder="Enter Street" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('street')?.invalid && updateUserForm.get('street')?.touched">Street is required.</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="area" class="form-label">Area</label>
+        <input type="text" class="form-control" id="area" formControlName="area" placeholder="Enter Area" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('area')?.invalid && updateUserForm.get('area')?.touched">Area is required.</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="city" class="form-label">City</label>
+        <input type="text" class="form-control" id="city" formControlName="city" placeholder="Enter City" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('city')?.invalid && updateUserForm.get('city')?.touched">City is required.</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="pincode" class="form-label">Pin Code</label>
+        <input type="text" class="form-control" id="pincode" formControlName="pincode" placeholder="Enter Pin Code" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('pincode')?.invalid && updateUserForm.get('pincode')?.touched">Pin Code is required.</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" class="form-control" id="country" formControlName="country" placeholder="Enter Country" required>
+        <div class="invalid-feedback" *ngIf="updateUserForm.get('country')?.invalid && updateUserForm.get('country')?.touched">Country is required.</div>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary space">Submit</button>
+</form>

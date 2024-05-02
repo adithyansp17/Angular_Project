@@ -1,0 +1,29 @@
+<div class="form-group">
+    <mat-toolbar color="primary" class="form-label" for="uid"> Select a User</mat-toolbar>
+    <select class="form-select" id="uid" formControlName="userId" (change)="onChangeUserId($event)">
+        <option selected>Select a value</option>
+        <option *ngFor="let u of arrUsers" [ngValue]="u.id">{{u.firstName}}</option>
+    </select>
+  </div>
+
+<form action=""><div class="form-group">
+    <mat-toolbar color="primary" class="form-label" for="oid"> Select an Order</mat-toolbar>
+    <select class="form-select" id="oid" formControlName="orderId" (change)="onChangeOrderId($event)">
+        <option selected>Select an Order</option>
+        <option *ngFor="let o of arrOrders1" [ngValue]="o.id">Order Id : {{o.id}} {{o.orderDate}}</option>
+    </select>
+  </div></form>
+
+  <div class="container">
+            <div class="row">
+                <div class="col-sm" *ngFor = "let dish of order.arrDishes; let i = index">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">{{dish.dName}}</h5>
+                          <p class="card-text">Rs {{dish.price}}</p>
+                          <p class="card-text">Qty : {{order.quantity[i]}}</p>
+                        </div>
+                </div>
+         </div>
+     </div>
+</div>   

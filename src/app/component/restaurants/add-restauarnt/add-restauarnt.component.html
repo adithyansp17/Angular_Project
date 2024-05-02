@@ -1,0 +1,304 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{ !isLinear ? "Enable linear mode" : "Disable linear mode" }}
+</button>
+<mat-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form
+      [formGroup]="firstFormGroup"
+      (ngSubmit)="saveFirstStepData(firstFormGroup)"
+    >
+      <mat-toolbar color="primary"> Add Restaurant Details </mat-toolbar>
+      <mat-form-field appearance="fill">
+        <mat-label>Restaurant Name</mat-label>
+        <input
+          matInput
+          placeholder="rName"
+          formControlName="rNameCtrl"
+          required
+        />
+        <mat-error *ngIf="firstFormGroup.controls.rNameCtrl.hasError('required')">Restaurant Name is required</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Location</mat-label>
+        <input
+          matInput
+          placeholder="Location"
+          formControlName="rLocationCtrl"
+          required
+        />
+        <mat-error *ngIf="firstFormGroup.controls.rLocationCtrl.hasError('required')">Location is required</mat-error>
+      </mat-form-field>
+      
+      
+      <div>IsOpen
+        <mat-radio-group formControlName="ROpen">
+          <mat-radio-button value="yes">Yes</mat-radio-button>
+          <mat-radio-button value="no">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      
+
+      <div>
+        <button
+          mat-button
+          [disabled]="firstFormGroup.invalid"
+          matStepperNext
+          type="submit"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" label="Fill out restaurant address">
+    <form
+      class="basic-container"
+      [formGroup]="addressListForm"
+      (ngSubmit)="saveSecondStepData(addressListForm)"
+    >
+      <mat-toolbar color="primary"> Add/Remove multiple addresses </mat-toolbar>
+      <div formArrayName="addresses">
+        <div
+          class="row"
+          *ngFor="let address of getAddressControls(); let i = index"
+          [formGroupName]="i"
+        >
+          <mat-form-field class="col-4">
+            <input
+              matInput
+              formControlName="houseno"
+              placeholder="houseno"
+              required
+            />
+            <mat-error
+              *ngIf="
+                getAddressControl(i)?.get('houseno')?.invalid &&
+                getAddressControl(i)?.get('houseno')?.touched
+              "
+            >
+              House number is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-4">
+            <input
+              matInput
+              formControlName="street"
+              placeholder="street"
+              required
+            />
+            <mat-error
+              *ngIf="
+                getAddressControl(i)?.get('street')?.invalid &&
+                getAddressControl(i)?.get('street')?.touched
+              "
+            >
+              Street is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-4">
+            <input
+              matInput
+              formControlName="area"
+              placeholder="area"
+              required
+            />
+            <mat-error
+              *ngIf="
+                getAddressControl(i)?.get('area')?.invalid &&
+                getAddressControl(i)?.get('area')?.touched
+              "
+            >
+              Area is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-4">
+            <input
+              matInput
+              formControlName="city"
+              placeholder="city"
+              required
+            />
+            <mat-error
+              *ngIf="
+                getAddressControl(i)?.get('city')?.invalid &&
+                getAddressControl(i)?.get('city')?.touched
+              "
+            >
+              City is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-4">
+            <input
+              matInput
+              formControlName="pincode"
+              placeholder="pincode"
+              required
+            />
+            <mat-error
+              *ngIf="
+                getAddressControl(i)?.get('pincode')?.invalid &&
+                getAddressControl(i)?.get('pincode')?.touched
+              "
+            >
+              Pincode is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-4">
+            <input
+              matInput
+              formControlName="country"
+              placeholder="country"
+              required
+            />
+            <mat-error
+              *ngIf="
+                getAddressControl(i)?.get('country')?.invalid &&
+                getAddressControl(i)?.get('country')?.touched
+              "
+            >
+              Country is required
+            </mat-error>
+          </mat-form-field>
+          <div class="col-3">
+            <button
+              class="float-left"
+              mat-icon-button
+              color="primary"
+              aria-label="Remove/clear"
+              (click)="removeOrClearItinery(i)"
+              matTooltip="Remove"
+            >
+              <mat-icon>highlight_off</mat-icon>
+            </button>
+            <button
+              class="float-left"
+              mat-icon-button
+              color="primary"
+              aria-label="Add"
+              (click)="addItineryFormGroup()"
+              matTooltip="Add"
+            >
+              <mat-icon>add_circle_outline</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button
+          mat-button
+          matStepperNext
+          [disabled]="addressListForm.invalid"
+          type="submit"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step [stepControl]="thirdFormGroup" label="Fill out restaurant dishes">
+    <form
+      class="basic-container"
+      [formGroup]="dishListForm"
+      (ngSubmit)="saveThirdStepData(dishListForm.value)"
+    >
+      <mat-toolbar color="primary"> Add/Remove multiple dishes </mat-toolbar>
+      <div formArrayName="dishes">
+        <div
+          class="row"
+          *ngFor="let address of Dishes().controls; let i = index"
+          [formGroupName]="i"
+        >
+          <mat-form-field class="col-4">
+            <input matInput formControlName="dName" placeholder="dName" />
+            <mat-error
+              *ngIf="
+                Dishes()?.get('dName')?.invalid &&
+                Dishes()?.get('dName')?.touched
+              "
+            >
+              Dish number is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-4">
+            <input matInput formControlName="price" placeholder="price" />
+            <mat-error
+              *ngIf="
+                Dishes()?.get('price')?.invalid &&
+                Dishes()?.get('price')?.touched
+              "
+            >
+              Price is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="col-4">
+            <input matInput formControlName="img_path" placeholder="img_path" />
+          </mat-form-field>
+
+          <div>IsAvailable 
+            <mat-radio-group formControlName="isAvailable">
+              <mat-radio-button value="yes">Yes</mat-radio-button>
+              <mat-radio-button value="no">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+          <div class="col-3">
+            <button
+              class="float-left"
+              mat-icon-button
+              color="primary"
+              aria-label="Remove/clear"
+              (click)="removeOrClearDish(i)"
+              matTooltip="Remove"
+              type="button"
+            >
+              <mat-icon>highlight_off</mat-icon>
+            </button>
+            <button
+              class="float-left"
+              mat-icon-button
+              color="primary"
+              aria-label="Add"
+              (click)="addDishFormGroup()"
+              matTooltip="Add"
+              type="button"
+            >
+              <mat-icon>add_circle_outline</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button
+          mat-button
+          matStepperNext
+          type="submit"
+          [disabled]="dishListForm.invalid"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>

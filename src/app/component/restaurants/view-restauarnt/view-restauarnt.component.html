@@ -1,0 +1,50 @@
+<div class="container" #container>
+  <div class="row">
+    <div *ngFor="let r of arrRes" class="col-lg-4 col-md-6 mb-4">
+      <div class="card"
+      (mouseenter)="toggleOverlay(true)"
+        (mouseleave)="toggleOverlay(false)">
+        <div
+        class="card-image"
+        [style.background-image]="
+          'url(../../../assets/images/rest' + r.id + '.jpg)'
+        "
+      ></div>
+        <div class="card-body">
+          <h4 class="card-title text-center">
+            <b>{{ r.rName }}</b>
+          </h4>
+          <div *ngFor="let a of r.arrAddress" class="mb-2">
+            <p class="card-text">
+              <strong>Address:</strong> {{ a.area }}, {{ a.city }}
+            </p>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-danger" (click)="deleteRest(r.id)">
+              Delete
+            </button>
+            <button class="btn btn-primary" (click)="SelectId(r.id)">
+              View More
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      
+        
+     
+            
+         
+         
+              
+           
+         
+    
